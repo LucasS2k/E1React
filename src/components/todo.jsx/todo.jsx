@@ -17,11 +17,6 @@ export default function Task({ item, onUpdate, onComplete, onDelete }) {
     onUpdate(item.id, value);
     setIsEdit(false);
   }
-
-  function handleCheckboxChange(e) {
-    onComplete(item.id, e.target.checked);
-  }
-
   return (
     <div className="task">
       {isEdit ? (

@@ -36,14 +36,6 @@ export default function TodoApp() {
   function handleDeleteAll() {
     setTasks([]);
   }
-
-  function handleCheckboxChange(id, status) {
-    const temp = [...tasks];
-    const item = temp.find((item) => item.id === id);
-    item.completed = status;
-    setTasks([...temp]);
-  }
-
   return (
     <div className="taskContainer">
       <form onSubmit={handleSubmit} className="taskCreateForm">
@@ -64,7 +56,6 @@ export default function TodoApp() {
             item={item}
             onUpdate={handleUpdate}
             onDelete={handleDelete}
-            onComplete={handleCheckboxChange}
           />
         ))}
       </div>
