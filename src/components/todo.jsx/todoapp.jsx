@@ -10,6 +10,7 @@ export default function TodoApp() {
   function handleSubmit(e) {
     e.preventDefault();
     const newTask = {
+      // El id se consigue con la hora actual para que sea unica
       id: Date.now(),
       title: title,
       completed: false,

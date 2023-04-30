@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Task({ item, onUpdate, onComplete, onDelete }) {
+export default function Task({ item, onUpdate, onDelete }) {
   const [isEdit, setIsEdit] = useState(false);
   const [value, setValue] = useState(item.title ?? "");
 
